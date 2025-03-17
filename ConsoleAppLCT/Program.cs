@@ -108,9 +108,31 @@ namespace ConsoleAppLCT
             // OverLoading obj = new OverLoading();
             // obj.M1("hi");
 
-            ConstrOverloading obj = new ConstrOverloading(34,56);
+            //   ConstrOverloading obj = new ConstrOverloading(34,56);
 
 
+            /* Parent p = new Parent();
+           //  p.Add();
+            // p.Sub();
+
+             Child c = new Child();
+             c.Mul();
+             c.Div();
+
+             c.Add();
+             c.Sub();
+            */
+
+            //RBI obj = new RBI();
+            //obj.Withdraw();
+            //obj.Deposite();
+
+            //ICICI obj1 = new ICICI();
+            //obj1.Withdraw();
+            //obj1.Deposite();
+
+
+            Vehicle.M2();
 
         }
     }
