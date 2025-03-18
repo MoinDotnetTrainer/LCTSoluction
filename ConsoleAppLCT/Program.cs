@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel;
-using System.Net.WebSockets;
+using System.Net.WebSockets; // namespace predefine 
+using ClassLibrary1;// user define
+
 
 namespace ConsoleAppLCT
 {
@@ -156,9 +158,29 @@ namespace ConsoleAppLCT
             //obj.DeptSalary();
             //obj.Add(12,3);
 
-            ExceptionHandling obj = new ExceptionHandling();
-            obj.Div();
+            // ExceptionHandling obj = new ExceptionHandling();
+            // obj.Div();
 
+            //  Operations obj = new Operations();
+            // obj.Add();
+
+
+
+            try
+            {
+                Prop obj1 = new Prop();
+                obj1.x_ = 45;
+                obj1.y_ = 55;
+
+                //max 100
+                //50 50
+                obj1.Add();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            
         }
     }
 }
