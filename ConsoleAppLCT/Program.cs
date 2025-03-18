@@ -1,4 +1,5 @@
-﻿using System.Net.WebSockets;
+﻿using System.ComponentModel;
+using System.Net.WebSockets;
 
 namespace ConsoleAppLCT
 {
@@ -132,7 +133,31 @@ namespace ConsoleAppLCT
             //obj1.Deposite();
 
 
-            Vehicle.M2();
+            //Vehicle.M2();
+
+            //ConstrChain obj = new ConstrChain("hi");
+
+
+            //ConstrChain2 obj= new ConstrChain2();
+
+            //Products obj1 = new Products();
+            //obj1.Sales();
+            //obj1.Production();
+
+            //CallByVal obj = new CallByVal();
+            //obj.Exe();
+
+            //// obj.Calculation(12,2,out int add , out int sub);
+            //Console.WriteLine(add);
+            //Console.WriteLine(sub);
+
+            //Dept obj = new Dept();
+            //obj.DeptEmp();
+            //obj.DeptSalary();
+            //obj.Add(12,3);
+
+            ExceptionHandling obj = new ExceptionHandling();
+            obj.Div();
 
         }
     }

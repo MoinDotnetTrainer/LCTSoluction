@@ -11,11 +11,12 @@ namespace ConsoleAppLCT
     {
         protected int x, y, z;
 
-        public void Add() {
+        public void Add()
+        {
             x = 45;
             y = 45;
             z = x + y;
-            Console.WriteLine("Add is:"+z);
+            Console.WriteLine("Add is:" + z);
         }
         public void Sub()
         {
