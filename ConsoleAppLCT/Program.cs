@@ -1,13 +1,14 @@
 ﻿using System.ComponentModel;
 using System.Net.WebSockets; // namespace predefine 
-using ClassLibrary1;// user define
+using ClassLibrary1;
+using ClassLibrary3;// user define
 
 
 namespace ConsoleAppLCT
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args)// single Thread , Main thread
         {
             /*Console.WriteLine("Hello, World from Program .cs!");
 
@@ -166,21 +167,89 @@ namespace ConsoleAppLCT
 
 
 
-            try
-            {
-                Prop obj1 = new Prop();
-                obj1.x_ = 45;
-                obj1.y_ = 55;
+            /*  try
+              {
+                  Prop obj1 = new Prop();
+                  obj1.x_ = 45;
+                  obj1.y_ = 55;
 
-                //max 100
-                //50 50
-                obj1.Add();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            
+                  //max 100
+                  //50 50
+                  obj1.Add();
+              }
+              catch (Exception e)
+              {
+                  Console.WriteLine(e.Message);
+              }
+            */
+
+            /*  Class2 obj = new Class2();
+               obj.Test();
+               obj.test2();
+               obj.Test3();
+            */
+
+
+
+            /*  DelExample obj = new DelExample();
+
+
+               Cal1 del = new Cal1(obj.Add);
+               del();
+
+               Cal1 del1 = new Cal1(obj.Sub);
+               del1();  // single
+
+
+               Cal2 c2 = new Cal2(obj.Mul);
+               c2 += new Cal2(obj.Div);
+               c2(23,3); // multi cast
+            */
+
+            /*   GenEx obj = new GenEx();
+               obj.Add(12,34);
+               obj.UserDetails<int , int>(12,23);
+               obj.UserDetails<int, string>(12,"Hi");
+               obj.UserDetails<string,string>("","");
+               obj.UserDetails<int>(23);
+
+               GenClass<int , int > obj1 = new GenClass<int, int >();
+               obj1.M1(22,34);
+
+               GenClass<int, string> obj2 = new GenClass<int, string>();
+               obj2.M1(22, "34");
+            */
+
+            /* Collections c = new Collections();
+             c.ListEx();
+             Console.WriteLine("hashset starts here");
+             c.Hashsetex();
+             Console.WriteLine("sorted set starts here");
+             c.SorrtedSet();
+
+             Console.WriteLine("any");
+             c.Any();
+             Console.WriteLine();
+             c.ArrayListEx();
+            */
+
+            /*  Multi obj = new Multi();
+
+              Thread t1 = new Thread(obj.M1);
+              t1.Start();
+
+              Thread t2 = new Thread(obj.M2);
+              t2.Start();
+            */
+
+            AsyncExample obj = new AsyncExample();
+           
+
+
+            Task t = new Task(obj.Call1);
+            t.Start();
+            t.Wait();
+            Console.ReadKey();
         }
     }
 }

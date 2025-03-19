@@ -12,6 +12,9 @@
     <Reference Include="ClassLibrary1">
       <HintPath>..\ClassLibrary1\bin\Debug\net8.0\ClassLibrary1.dll</HintPath>
     </Reference>
+    <Reference Include="ClassLibrary3">
+      <HintPath>..\ClassLibrary3\bin\Debug\net8.0\ClassLibrary3.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
