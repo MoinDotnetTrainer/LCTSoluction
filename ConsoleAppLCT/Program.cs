@@ -2,6 +2,8 @@
 using System.Net.WebSockets; // namespace predefine 
 using ClassLibrary1;
 using ClassLibrary3;// user define
+using ClassLibraryLINQ;
+
 
 
 namespace ConsoleAppLCT
@@ -242,14 +244,17 @@ namespace ConsoleAppLCT
               t2.Start();
             */
 
-            AsyncExample obj = new AsyncExample();
-           
+            /* AsyncExample obj = new AsyncExample();
+             Task t = new Task(obj.Call1);
+             t.Start();
+             t.Wait();
+             Console.ReadKey();
 
+             */
 
-            Task t = new Task(obj.Call1);
-            t.Start();
-            t.Wait();
-            Console.ReadKey();
+          LINQExamples obj= new LINQExamples();
+            obj.Test4();
+          
         }
     }
 }
