@@ -8,6 +8,12 @@ using ClassLibraryLINQ;
 
 namespace ConsoleAppLCT
 {
+    public class Students
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+    }
     internal class Program
     {
         static void Main(string[] args)// single Thread , Main thread
@@ -251,10 +257,40 @@ namespace ConsoleAppLCT
              Console.ReadKey();
 
              */
+            List<Students> students_ = new List<Students>()
+ {
+     new Students { ID = 101, Name = "Preety", Age = 22 },
+     new Students { ID = 102, Name = "Sambit", Age = 60 },
+     new Students { ID = 103, Name = "Hina", Age = 55 },
+     new Students { ID = 104, Name = "Anurag", Age = 24 },
+     new Students { ID = 101, Name = "Preety", Age = 22 },
+     new Students { ID = 102, Name = "Sambit", Age = 23 },
+     new Students { ID = 103, Name = "Hina", Age = 26 },
+     new Students { ID = 102, Name = "Sambit", Age = 25 },
+     new Students { ID = 103, Name = "Hina", Age = 30 },
+     new Students { ID = 101, Name = "Preety", Age = 22 },
+     new Students { ID = 100, Name = "Anurag", Age = 24 }
+ };
 
-          LINQExamples obj= new LINQExamples();
-            obj.Test4();
-          
+            
+
+            var res = (from s in students_ where s.Age >= 25 select s);//no of 5
+
+            var res1 = (from s in students_ where s.Age >= 25 select s).Count();//5, s e
+
+            students_.Add(new Students { ID = 200, Name = "xyz", Age = 35 });
+
+
+            foreach (var item in res)// at this
+            {
+                Console.WriteLine($"FirstName is {item.Name} , last name is {item.Age}");// 6
+            }
+
+            Console.WriteLine("No of Students:" + res1); // 5
+
+
         }
+
+
     }
 }
